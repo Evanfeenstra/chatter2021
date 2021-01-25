@@ -1,38 +1,30 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #67B26F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.header{
+  background:rgba(255,255,255,0.2);
+  border-bottom:1px solid white;
+  height: 2.5rem;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 12px;
+  font-size:1.2rem;
+  color:white;
+  font-weight: bold;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo{
+  height:1.8rem;
+  width:1.8rem;
+  margin-right:10px;
+  background: url(./img/parrot.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
 }
