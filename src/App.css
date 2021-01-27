@@ -7,6 +7,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .header{
   background:rgba(255,255,255,0.2);
@@ -27,4 +28,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
+}
+.text-input{
+  background:rgba(255,255,255,0.2);
+  border-top:1px solid white;
+  height: 2.5rem;
 }
