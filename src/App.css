@@ -35,9 +35,9 @@
 
 .messages{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   flex: 1;
-  justify-content: flex-end;
+  overflow: auto;
 }
 .message-row{
   width:100%;
@@ -46,7 +46,7 @@
   background:black;
   color:white;
   border-radius:10px;
-  margin:10px;
+  margin:4px;
   display: inline-block;
   padding: 4px 12px;
 }
@@ -73,6 +73,19 @@
   outline:none;
   height:1.4rem;
   width:1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.send-button[disabled]{
+  background:grey;
+  cursor: default;
+}
+.send-button > svg {
+  color: black;
+}
+.send-button[disabled] > svg {
+  color: white;
 }
 
 .input{
