@@ -5,6 +5,9 @@ import TextInput from './TextInput';
 
 function App() {
   const [messages,setMessages] = useState([{text:'hello'}])
+
+  console.log(messages)
+
   return <div className="App">
  
     <header className="header">
@@ -12,12 +15,18 @@ function App() {
       CHATTER
     </header>
 
-    <div className="message">
-      {messages[0].text}
-    </div>
+    <main className="messages">
+      {messages.map((m,i)=> {
+        return <div key={i} className="message-row">
+          <div className="message">
+            {m.text}
+          </div>
+        </div>
+      })}
+    </main>
 
     <TextInput 
-      send={(t)=> setMessages([{text:t}])}
+      send={(t)=> setMessages( [...messages, {text:t}] )}
     />
 
   </div>
