@@ -25,7 +25,7 @@ function App() {
     </main>
 
     <TextInput 
-      send={(t)=> setMessages( [{text:t, name:username, date:new Date()}, ...messages] )}
+      send={(t)=> setMessages([{text:t, name:username, ts:new Date()}, ...messages])}
     />
 
   </div>
