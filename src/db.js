@@ -12,7 +12,7 @@ function useDB(room) {
     function add(m) {
         setMessages(current => {
             const msgs = [m, ...current]
-            msgs.sort((a,b)=> b.ts.seconds - a.ts.seconds)
+            msgs.sort((a,b)=> b.date.seconds - a.date.seconds)
             return msgs
         })
     }
