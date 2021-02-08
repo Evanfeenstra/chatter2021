@@ -41,6 +41,7 @@
 }
 .message-row{
   width:100%;
+  display: flex;
 }
 .message{
   background:black;

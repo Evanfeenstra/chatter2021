@@ -23,7 +23,8 @@ function App() {
 
     <main className="messages">
       {messages.map((msg,i)=> {
-        return <Message key={i} {...msg} />
+        const isMe = msg.name===username
+        return <Message key={i} {...msg} isMe={isMe} />
       })}
     </main>
 
