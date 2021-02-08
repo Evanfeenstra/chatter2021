@@ -24,7 +24,7 @@ function useDB(room) {
         const collection = room ? 
             store.collection(coll).where('room','==',room) :
             store.collection(coll)
-       
+        
         collection.onSnapshot(snap=> snap.docChanges().forEach(c=> {
             const {doc, type} = c
             if (type==='added') add({...doc.data(),id:doc.id})
