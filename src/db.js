@@ -12,7 +12,7 @@ function useDB(room) {
     function add(m) {
         setMessages(current => {
             const msgs = [m, ...current]
-            msgs.sort((a,b)=> b.date.seconds - a.date.seconds)
+            msgs.sort((a,b)=> (b.date && b.date.seconds) - (a.date && a.date.seconds))
             return msgs
         })
     }
@@ -30,7 +30,7 @@ function useDB(room) {
             if (type==='added') add({...doc.data(),id:doc.id})
             if (type==='removed') remove(doc.id)
         }))
-    }, [])
+    }, [room])
     return messages
 }
 
